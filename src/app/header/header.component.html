@@ -1,0 +1,16 @@
+<!-- header.component.html -->
+<header>
+  <div class="logo">
+    <img src="../../assets/logo.png" alt="company" width="160" height="90">
+  </div>
+  <button class="mobile-menu-button" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav [class.open]="isMenuOpen">
+    <a *ngFor="let item of navService.navItems" 
+       [routerLink]="item.link" 
+       routerLinkActive="active">
+      {{item.label}}
+    </a>
+  </nav>
+</header>

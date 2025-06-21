@@ -1,0 +1,32 @@
+/* product-card.component.scss */
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  h3 {
+    color: #2c3e50;
+    margin-top: 0;
+  }
+  
+  .learn-more {
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
