@@ -1,0 +1,60 @@
+<!-- home.component.html -->
+<section class="hero">
+    <h1>Welcome To RN Glass And Aluminium</h1>
+    <h2>Your Trusted Partner in Quality Glass and Aluminium Solutions</h2>
+    <p>At RN Glass and Aluminium, based in the heart of Midrand, Gauteng, we specialize in providing top-tier glass and
+        aluminium services tailored to your needs. From sleek aluminium windows and doors to secure bulletproof windows,
+        our commitment to excellence ensures that you receive products that combine both aesthetics and functionality.
+    </p>
+    <a routerLink="/contact" class="cta-button">REQUEST A QUOTE <i class="far fa-smile"></i></a>
+</section>
+
+<section class="welcome-section">
+  <div class="container">
+    <div class="intro">
+      <h4>Welcome To RN Glass And Aluminium</h4>
+      <h1>Your Trusted Partner in Quality<br>Glass and Aluminium Solutions</h1>
+      <p>
+        At RN Glass and Aluminium, based in the heart of Midrand, Gauteng, we specialize in providing
+        top-tier glass and aluminium services tailored to your needs. From sleek aluminium windows and
+        doors to secure bulletproof windows, our commitment to excellence ensures that you receive products
+        that combine both aesthetics and functionality.
+      </p>
+      <button>More About Us</button>
+    </div>
+    <div class="info-boxes">
+      <div class="box free-measurement">
+        <h3>Free Measurement</h3>
+        <p>
+          At RN Glass and Aluminium, we understand the importance of precision and accuracy when it comes
+          to installing windows, doors, and other glass fixtures. That’s why we offer a complimentary
+          measurement service to all our clients.
+        </p>
+      </div>
+      <div class="box commitment">
+        <h3>Committed To<br>Our Work</h3>
+        <p>
+          At RN Glass and Aluminium, our commitment to excellence is the cornerstone of everything we do.
+          We believe in delivering more than just products and services; we deliver peace of mind and lasting quality.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="products-section">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+    </div>
+</section>
+
+<section class="service-section">
+    <h2>Personalized Service</h2>
+    <p>Our owner personally supervises all installations, ensuring the highest quality standards and customer
+        satisfaction. We don't just install products - we provide complete solutions tailored to your specific needs.
+    </p>
+    <p>With extensive design experience, we can advise on both functional and aesthetic solutions for your home or
+        office, always focusing on delivering the best value.</p>
+</section>
