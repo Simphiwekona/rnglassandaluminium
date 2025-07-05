@@ -1,0 +1,22 @@
+<section class="projects">
+  <div class="projects-info">
+    <h4>Projects</h4>
+    <h3>Latest Projects</h3>
+    <p>
+      At RN Glass and Aluminium, we take pride in every project we undertake.
+      Our commitment to quality and excellence is reflected in the diverse range
+      of projects we have successfully completed across Gauteng.
+    </p>
+    <a href="#">All Projects <span>&rarr;</span></a>
+  </div>
+
+  <div class="projects-gallery">
+    <div class="project-image" *ngFor="let img of images; let i = index">
+      <img [src]="img" [alt]="'Project ' + (i + 1)">
+      <div class="image-overlay">
+        <h3>{{ getImageTitle(i) }}</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+</section>

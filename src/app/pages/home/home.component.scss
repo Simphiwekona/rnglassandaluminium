@@ -1,18 +1,19 @@
 /* home.component.scss */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 .hero {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/header.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/placeholder11.jpg');
   background-size: cover;
   background-position: center;
   color: white;
   padding: 6rem 1rem;
   text-align: center;
-  
+
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
-  
+
   p {
     font-size: 1.2rem;
     max-width: 600px;
@@ -22,7 +23,7 @@
 
 .cta-button {
   display: inline-block;
-  background-color: #e67e22;
+  background-color: #3498db;
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
@@ -30,25 +31,26 @@
   font-weight: bold;
   font-size: 1.1rem;
   transition: background-color 0.3s;
-  
+
   &:hover {
     background-color: #c0392b;
   }
 }
 
-.about-section, .service-section {
+.about-section,
+.service-section {
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 1rem;
-  
+
   h2 {
     color: #2c3e50;
     margin-bottom: 1.5rem;
   }
-  
+
   ul {
     padding-left: 1.5rem;
-    
+
     li {
       margin-bottom: 0.5rem;
     }
@@ -58,7 +60,7 @@
 .products-section {
   background-color: #f5f5f5;
   padding: 3rem 1rem;
-  
+
   h2 {
     text-align: center;
     color: #2c3e50;
@@ -73,7 +75,10 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .welcome-section {
+  width: 80%;
+  margin: 0 auto;
   padding: 4rem 2rem;
   background-color: #fff;
   animation: fadeIn 1s ease-in-out;
@@ -88,6 +93,7 @@
   .intro {
     flex: 1 1 50%;
     animation: slideInLeft 1s ease forwards;
+    margin: auto 0;
 
     h4 {
       font-weight: 600;
@@ -125,16 +131,16 @@
     flex: 1 1 40%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    // gap: 1.5rem;
 
     .box {
+      width: 50%;
       padding: 1.5rem;
       color: #fff;
-      border-radius: 8px;
       opacity: 0;
       transform: translateY(20px);
       animation: slideUp 1s ease forwards;
-      animation-delay: 0.5s;
+      animation-delay: 1s;
 
       h3 {
         font-size: 1.25rem;
@@ -152,6 +158,7 @@
 
       &.commitment {
         background-color: #2d4c5c;
+        margin-left: 40%;
       }
     }
   }
@@ -163,8 +170,21 @@
       align-items: center;
     }
 
-    .intro, .info-boxes {
+    .intro,
+    .info-boxes {
       flex: 1 1 100%;
+    }
+
+    .info-boxes {
+      gap: 10px;
+      .box {
+        width: 80%;
+        
+        &.commitment {
+        background-color: #2d4c5c;
+        margin-left: 0;
+      }
+      }
     }
 
     .intro h1 {
@@ -184,10 +204,76 @@
   }
 }
 
+.aboutus {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 500px;
+
+  .image1 {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  .about-content {
+    flex: 1;
+    background-color: #102c6d; // deep navy blue
+    color: white;
+    padding: 3rem;
+
+    h4 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      color: #c3d4ff;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .aboutus {
+    flex-direction: column;
+
+    .image1,
+    .about-content {
+      flex: 1 1 100%;
+    }
+
+    .about-content {
+      padding: 2rem;
+    }
+  }
+}
+
+
 // Animations
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInLeft {
@@ -195,6 +281,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -206,6 +293,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);

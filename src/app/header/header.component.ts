@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationService } from '../services/navigation.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,9 +14,13 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent {
 isMenuOpen = false;
 
-  constructor(public navService: NavigationService) {}
+  constructor(public navService: NavigationService, private router: Router) {}
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  homePage(){
+    this.router.navigate([''])
   }
 }

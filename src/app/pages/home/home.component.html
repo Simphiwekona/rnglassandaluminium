@@ -1,12 +1,13 @@
 <!-- home.component.html -->
 <section class="hero">
-    <h1>Welcome To RN Glass And Aluminium</h1>
-    <h2>Your Trusted Partner in Quality Glass and Aluminium Solutions</h2>
-    <p>At RN Glass and Aluminium, based in the heart of Midrand, Gauteng, we specialize in providing top-tier glass and
-        aluminium services tailored to your needs. From sleek aluminium windows and doors to secure bulletproof windows,
-        our commitment to excellence ensures that you receive products that combine both aesthetics and functionality.
-    </p>
-    <a routerLink="/contact" class="cta-button">REQUEST A QUOTE <i class="far fa-smile"></i></a>
+  <!-- <app-header></app-header> -->
+  <h1>Welcome To RN Glass And Aluminium</h1>
+  <h2>Your Trusted Partner in Quality Glass and Aluminium Solutions</h2>
+  <p>At RN Glass and Aluminium, based in the heart of Midrand, Gauteng, we specialize in providing top-tier glass and
+    aluminium services tailored to your needs. From sleek aluminium windows and doors to secure bulletproof windows,
+    our commitment to excellence ensures that you receive products that combine both aesthetics and functionality.
+  </p>
+  <a [href]="whatsappLink" target="_blank" class="cta-button">REQUEST A QUOTE </a>
 </section>
 
 <section class="welcome-section">
@@ -42,19 +43,41 @@
   </div>
 </section>
 
-
-<section class="products-section">
-    <h2>Our Products</h2>
-    <div class="products-grid">
-        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
-    </div>
+<section class="aboutus">
+  <div class="image1">
+    <img src="assets/placeholder1.jpg" alt="">
+  </div>
+  <div class="about-content">
+    <h4>About Us</h4>
+    <h3>Our Journey: From Local Beginnings to Industry Leader</h3>
+    <p>
+      Founded in Midrand, RN Glass and Aluminium has grown from a small local business into a trusted name in the industry. 
+      Our success is built on a foundation of strong values, skilled craftsmanship, and a passion for excellence.
+    </p>
+  </div>
 </section>
 
+<section>
+  <app-projects></app-projects>
+</section>
+
+
+<!-- <section class="products-section">
+  <h2>Our Products</h2>
+  <div class="products-grid">
+    <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+  </div>
+</section> -->
+
 <section class="service-section">
-    <h2>Personalized Service</h2>
-    <p>Our owner personally supervises all installations, ensuring the highest quality standards and customer
-        satisfaction. We don't just install products - we provide complete solutions tailored to your specific needs.
-    </p>
-    <p>With extensive design experience, we can advise on both functional and aesthetic solutions for your home or
-        office, always focusing on delivering the best value.</p>
+  <h2>Personalized Service</h2>
+  <p>Our owner personally supervises all installations, ensuring the highest quality standards and customer
+    satisfaction. We don't just install products - we provide complete solutions tailored to your specific needs.
+  </p>
+  <p>With extensive design experience, we can advise on both functional and aesthetic solutions for your home or
+    office, always focusing on delivering the best value.</p>
+</section>
+
+<section>
+  <app-footer></app-footer>
 </section>

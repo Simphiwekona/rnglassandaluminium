@@ -3,13 +3,16 @@ import { Component } from '@angular/core';
 import { ProductCardComponent } from "../../components/product-card/product-card.component";
 import { Product } from '../../model/product.model';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../../header/header.component";
+import { ProjectsComponent } from "../../components/projects/projects.component";
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [ProductCardComponent, CommonModule]
+  imports: [ProductCardComponent, CommonModule, HeaderComponent, ProjectsComponent, FooterComponent]
 })
 export class HomeComponent {
   products: Product[] = [
@@ -41,4 +44,11 @@ export class HomeComponent {
     'South African Glass Institute (SAGI)',
     'South African Bureau of Standards (SABS)'
   ];
+
+  phoneNumber = '0710939931';
+  message = 'Hello, I would like to inquire about your services';
+  
+  get whatsappLink() {
+    return `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(this.message)}`;
+  }
 }
