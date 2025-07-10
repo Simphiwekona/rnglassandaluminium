@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './whatsapp-button.component.scss'
 })
 export class WhatsappButtonComponent {
-  phoneNumber = '0710939931';
+  phoneNumber = '27710939931';
   message = 'Hello, I would like to inquire about your services';
   
   get whatsappLink() {
